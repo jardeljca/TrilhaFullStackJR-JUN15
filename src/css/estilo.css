@@ -9,6 +9,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 
 body {
@@ -22,10 +23,10 @@ body {
 header {
     display: flex;
     align-items: center;
-    margin-top: 10px;
 }
 
 header .header {
+    height: 20vh;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -47,8 +48,8 @@ header nav {
     align-items: center;
     width: 100vw;
     height: 100vh;
+    margin-top: 30px;
     color: var(--color1);
-    margin-top: 10px;
 }
 
 header .tiluloNav {
@@ -59,7 +60,6 @@ header .tiluloNav {
 }
 
 header .tiluloNav img {
-    margin-left: 10px;
     width: 25vw;
 }
 
@@ -84,4 +84,28 @@ nav ul li {
 
 nav a{
     color: var(--color3);
+}
+
+/* Main */
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80vh;
+}
+main h1{
+    color: var(--color3);
+    text-align: center;
+    font-size: 15vw;
+}
+main h3{
+    color: var(--color3);
+    text-align: center;
+    font-size:7vw;
+    font-weight: lighter;
+}
+main img{
+    width: 70vw;
 }
