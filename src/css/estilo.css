@@ -77,14 +77,12 @@ nav ul li {
     width: 40vw;
     height: 10vw;
     background-color: var(--color2);
-    border: solid 1px var(--color3);
     color: var(--color1);
     text-align: center;
 }
 
 nav ul li.ativo{
     background-color: var(--color3);
-    border: #000000 solid 1px;
 }
 
 nav a{
@@ -94,21 +92,22 @@ nav a{
 /*Formulários de login e cadastro*/
 
 nav .form{
-    border: #fff solig 1px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 90vw;
     height: 100vw;
-    background-color: #121212;
+    background-color: var(--color3);
 }
 
 nav .form input{
-    margin: 10px;
+    margin: 15px;
     text-align: center;
     font-size: 5vw;
     display: flex;
+    border: var(--color2 1px solid);
+    padding: 5px;
 }
 
 
