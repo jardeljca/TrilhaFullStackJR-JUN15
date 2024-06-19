@@ -49,7 +49,6 @@ header nav {
     width: 100vw;
     height: 100vh;
     margin-top: 30px;
-    color: var(--color1);
 }
 
 header .tiluloNav {
@@ -67,24 +66,51 @@ header .tiluloNav .iconeMenuX {
     font-size: 8vw;
 }
 
-nav ul {
-    margin-top: 40%;
+nav ul { 
+    margin-top: 10%;
     cursor: pointer;
+    display: flex;
 }
 
 nav ul li {
     margin-top: 20px;
     width: 40vw;
     height: 10vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: var(--color2);
+    border: solid 1px var(--color3);
+    color: var(--color1);
+    text-align: center;
+}
+
+nav ul li.ativo{
+    background-color: var(--color3);
+    border: #000000 solid 1px;
 }
 
 nav a{
-    color: var(--color3);
+    font-size:7vw;
 }
+
+/*Formulários de login e cadastro*/
+
+nav .form{
+    border: #fff solig 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 100vw;
+    background-color: #121212;
+}
+
+nav .form input{
+    margin: 10px;
+    text-align: center;
+    font-size: 5vw;
+    display: flex;
+}
+
 
 /* Main */
 

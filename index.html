@@ -26,9 +26,27 @@
             </div>
 
             <ul>
-                <li><a href="">Login</a></li>
-                <li><a href="">Cadastrar</a></li>
+                <li id="botaoLogin" class="ativo">
+                    <a href="">Login</a>
+                </li>
+                <li id="botaoCadastro">
+                    <a href="">Cadastrar</a>
+                </li>
             </ul>
+            <div class="form">
+                <form class="login" id="formLogin">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="senha" placeholder="Senha" required>
+                    <input type="submit" value="Entrar">
+                </form>
+                <form class="Cadastro" id="formCadastro">
+                    <input type="text" name="nome" placeholder="Digite seu nome completo" required>
+                    <input type="email" name="email" placeholder="Digite seu email" required>
+                    <input type="password" name="senha" placeholder="Digite a senha" required>
+                    <input type="password" name="confirmaSenha" placeholder="Digite a senha novamente" required>
+                    <input type="submit" value="Cadastrar">
+                </form>
+            </div>
         </nav>
     </header>
     <main id="main">
