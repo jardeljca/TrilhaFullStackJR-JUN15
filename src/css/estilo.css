@@ -37,12 +37,30 @@ header .header {
     width: 25vw;
 }
 
-header .iconeMenu {
+.menuDesktop ul {
+    cursor: pointer;
+    display: flex;
+}
+
+.menuDesktop ul li {
+    margin: 10px;
+    width: 20vw;
+    background-color: var(--color2);
+    color: var(--color1);
+    text-align: center;
+    border-radius: 30px;
+}
+
+.menuDesktop a {
+    font-size: 4vw;
+}
+
+.header .iconeMenu {
     font-size: 8vw;
 }
 
 /*Menu nav*/
-header nav {
+header .menuMobile {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,28 +69,28 @@ header nav {
     margin-top: 30px;
 }
 
-header .tiluloNav {
+header .menuMobile .tiluloNav {
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 100vw;
 }
 
-header .tiluloNav img {
+header .menuMobile .tiluloNav img {
     width: 25vw;
 }
 
-header .tiluloNav .iconeMenuX {
+header .menuMobile .tiluloNav .iconeMenuX {
     font-size: 8vw;
 }
 
-nav ul { 
+.menuMobile ul {
     margin-top: 10%;
     cursor: pointer;
     display: flex;
 }
 
-nav ul li {
+.menuMobile ul li {
     margin-top: 20px;
     width: 40vw;
     height: 10vw;
@@ -81,17 +99,17 @@ nav ul li {
     text-align: center;
 }
 
-nav ul li.ativo{
+.menuMobile ul li.ativo {
     background-color: var(--color3);
 }
 
-nav a{
-    font-size:7vw;
+.menuMobile a {
+    font-size: 7vw;
 }
 
 /*Formulários de login e cadastro*/
 
-nav .form{
+.menuMobile .form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,7 +119,7 @@ nav .form{
     background-color: var(--color3);
 }
 
-nav .form input{
+.menuMobile .form input {
     margin: 15px;
     text-align: center;
     font-size: 5vw;
@@ -113,24 +131,136 @@ nav .form input{
 
 /* Main */
 
-main{
+main {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     height: 80vh;
 }
-main h1{
+
+main h1 {
     color: var(--color3);
     text-align: center;
     font-size: 15vw;
 }
-main h3{
+
+main h3 {
     color: var(--color3);
     text-align: center;
-    font-size:7vw;
+    font-size: 7vw;
     font-weight: lighter;
 }
-main img{
+
+main img {
+    width: 70vw;
+}
+
+@media (min-width: 560px) {
+    .header img {
+        width: 120px;
+    }
+
+    .menuDesktop ul li {
+        margin: 10px;
+        width: 100px;
+    }
+
+    .menuDesktop a {
+        font-size: 20px;
+    }
+}
+
+
+/*
+header .menuMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 30px;
+}
+
+header .menuMobile .tiluloNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+}
+
+header .menuMobile .tiluloNav img {
+    width: 25vw;
+}
+
+header .menuMobile .tiluloNav .iconeMenuX {
+    font-size: 8vw;
+}
+
+.menuMobile ul {
+    margin-top: 10%;
+    cursor: pointer;
+    display: flex;
+}
+
+.menuMobile ul li {
+    margin-top: 20px;
+    width: 40vw;
+    height: 10vw;
+    background-color: var(--color2);
+    color: var(--color1);
+    text-align: center;
+}
+
+.menuMobile ul li.ativo {
+    background-color: var(--color3);
+}
+
+.menuMobile a {
+    font-size: 7vw;
+}
+
+
+.menuMobile .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 100vw;
+    background-color: var(--color3);
+}
+
+.menuMobile .form input {
+    margin: 15px;
+    text-align: center;
+    font-size: 5vw;
+    display: flex;
+    border: var(--color2 1px solid);
+    padding: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80vh;
+}
+
+main h1 {
+    color: var(--color3);
+    text-align: center;
+    font-size: 15vw;
+}
+
+main h3 {
+    color: var(--color3);
+    text-align: center;
+    font-size: 7vw;
+    font-weight: lighter;
+}
+
+main img {
     width: 70vw;
 }
