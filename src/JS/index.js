@@ -2,16 +2,21 @@ const botaoMenu = document.getElementById("iconeMenu");
 const botaoMenuX = document.getElementById("iconeMenuX");
 const botaoLogin = document.getElementById("botaoLogin");
 const botaoCadastro = document.getElementById("botaoCadastro");
+const botaoLoginDesktop = document.getElementById("botaoLoginDesktop");
+const botaoCadastroDesktop = document.getElementById("botaoCadastroDesktop");
 const menuNav = document.getElementById("menuNav");
 const menuDesk = document.getElementById("menuDesktop");
 const header = document.getElementById("header");
 const main = document.getElementById("main");
 const formLogin = document.getElementById("formLogin");
 const formCadastro = document.getElementById("formCadastro");
-
+const formLoginDesktop = document.getElementById("formLoginDesktop");
+const formCadastroDesktop = document.getElementById("formCadastroDesktop");
 // Inicializar estados
 menuNav.style.display = "none";
 formCadastro.style.display = "none";
+formLoginDesktop.style.display = "none"
+formCadastroDesktop.style.display = "none"
 
 // Função para ajustar os menus com base na largura da janela
 function ajustarMenus() {
@@ -56,6 +61,18 @@ function ajustarMenus() {
     botaoMenu.style.display = "none";
     header.style.display = "flex";
     main.style.display = "flex";
+    
+    botaoLoginDesktop.addEventListener("click", (event) => {
+      Event.preventDefault();
+      formLoginDesktop.style.display = "block";
+      formCadastroDesktop.style.display = "none";
+    })
+    
+    botaoCadastroDesktop.addEventListener("click", (event) => {
+      Event.preventDefault();
+      formCadastroDesktop.style.display = "block";
+      formLoginDesktop.style.display = "none";
+    })
   }
 }
 

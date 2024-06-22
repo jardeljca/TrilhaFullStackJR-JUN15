@@ -19,10 +19,10 @@
             <img src="./src/imagens/logoCodigoCerto.jpg" alt="Logo">
             <nav class="menuDesktop" id="menuDesktop">
                 <ul>
-                    <li>
+                    <li id="botaoLoginDesktop">
                         <a href="">Login</a>
                     </li>
-                    <li>
+                    <li id="botaoCadastroDesktop">
                         <a href="">Cadastrar</a>
                     </li>
                 </ul>
@@ -60,6 +60,20 @@
         </nav>
     </header>
     <main id="main">
+       <div class="formDesktop">
+                <form class="loginDesktop" id="formLoginDesktop">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="senha" placeholder="Senha" required>
+                    <input type="submit" value="Entrar">
+                </form>
+                <form class="CadastroDesktop" id="formCadastroDesktop">
+                    <input type="text" name="nome" placeholder="Digite seu nome completo" required>
+                    <input type="email" name="email" placeholder="Digite seu email" required>
+                    <input type="password" name="senha" placeholder="Digite a senha" required>
+                    <input type="password" name="confirmaSenha" placeholder="Digite a senha novamente" required>
+                    <input type="submit" value="Cadastrar">
+                </form>
+        </div>
         <h1>Software para gestão de projetos</h1>
         <h3>A melhor ferramenta para gestão de seus projetos e trabalho em equipe!</h3>
         <img src="./src/imagens/gestaoProjetos.webp" alt="">

@@ -137,6 +137,29 @@ main {
     justify-content: space-evenly;
     align-items: center;
     height: 80vh;
+    position: absolute;
+}
+
+main .formDesktop{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 100vw;
+    background-color: var(--color1);
+    position: relative;
+    top: 50px;
+    left: 30px;
+}
+
+main .formDesktop input {
+    margin: 15px;
+    text-align: center;
+    font-size: 5vw;
+    display: flex;
+    border: var(--color2 1px solid);
+    padding: 5px;
 }
 
 main h1 {
