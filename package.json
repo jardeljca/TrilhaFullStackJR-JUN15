@@ -1,0 +1,16 @@
+{
+  "name": "trilhafullstackjr-jun15",
+  "version": "1.0.0",
+  "description": "aplicação de gerenciamento de projetos desenvolvida em node js e mongo db",
+  "main": "back-end/src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node back-end/src/index.js"
+  },
+  "author": "Jardel Queiroz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.4.3"
+  }
+}
