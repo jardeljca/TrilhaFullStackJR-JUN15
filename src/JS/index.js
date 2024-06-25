@@ -12,11 +12,12 @@ const formLogin = document.getElementById("formLogin");
 const formCadastro = document.getElementById("formCadastro");
 const formLoginDesktop = document.getElementById("formLoginDesktop");
 const formCadastroDesktop = document.getElementById("formCadastroDesktop");
+
 // Inicializar estados
 menuNav.style.display = "none";
 formCadastro.style.display = "none";
-formLoginDesktop.style.display = "none"
-formCadastroDesktop.style.display = "none"
+formLoginDesktop.style.display = "none";
+formCadastroDesktop.style.display = "none";
 
 // Função para ajustar os menus com base na largura da janela
 function ajustarMenus() {
@@ -27,7 +28,7 @@ function ajustarMenus() {
     menuDesk.style.display = "none";
     header.style.display = "flex";
     main.style.display = "flex";
-    
+
     botaoMenu.addEventListener("click", () => {
       header.style.display = "none";
       main.style.display = "none";
@@ -44,16 +45,16 @@ function ajustarMenus() {
       event.preventDefault();
       formLogin.style.display = "block";
       formCadastro.style.display = "none";
-      botaoLogin.classList.add('ativo');
-      botaoCadastro.classList.remove('ativo');
+      botaoLogin.classList.add("ativo");
+      botaoCadastro.classList.remove("ativo");
     });
 
     botaoCadastro.addEventListener("click", (event) => {
       event.preventDefault();
       formCadastro.style.display = "block";
       formLogin.style.display = "none";
-      botaoCadastro.classList.add('ativo');
-      botaoLogin.classList.remove('ativo');
+      botaoCadastro.classList.add("ativo");
+      botaoLogin.classList.remove("ativo");
     });
   } else {
     menuDesk.style.display = "flex";
@@ -61,18 +62,18 @@ function ajustarMenus() {
     botaoMenu.style.display = "none";
     header.style.display = "flex";
     main.style.display = "flex";
-    
+
     botaoLoginDesktop.addEventListener("click", (event) => {
-      Event.preventDefault();
-      formLoginDesktop.style.display = "block";
+      event.preventDefault();
+      formLoginDesktop.style.display = "flex";
       formCadastroDesktop.style.display = "none";
-    })
-    
+    });
+
     botaoCadastroDesktop.addEventListener("click", (event) => {
-      Event.preventDefault();
-      formCadastroDesktop.style.display = "block";
+      event.preventDefault();
+      formCadastroDesktop.style.display = "flex";
       formLoginDesktop.style.display = "none";
-    })
+    });
   }
 }
 

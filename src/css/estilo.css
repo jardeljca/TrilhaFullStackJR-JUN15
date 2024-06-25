@@ -141,25 +141,27 @@ main {
 }
 
 main .formDesktop{
-  display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90vw;
-    height: 100vw;
+    width: 200px;
+    height: auto;
     background-color: var(--color1);
     position: relative;
-    top: 50px;
-    left: 30px;
+    top: -30px;
+    left: 200px;
 }
 
-main .formDesktop input {
-    margin: 15px;
-    text-align: center;
-    font-size: 5vw;
+main .formDesktop .loginDesktop, .CadastroDesktop{
     display: flex;
-    border: var(--color2 1px solid);
-    padding: 5px;
+    flex-direction: column;
+    padding: 10px;
+    border: var(--color3) 1px solid;
+}
+
+main .formDesktop input{
+    margin: 5px;
 }
 
 main h1 {
