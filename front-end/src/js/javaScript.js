@@ -84,3 +84,14 @@ ajustarMenus();
 
 // Ajustar menus no redimensionamento da janela
 window.addEventListener("resize", ajustarMenus);
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/* Validação de formulários (código para validação de formulário será feito em outro momento)
+
+//constantes dos formularios serão reutilizadas como formLogin e formCadastro
+const nome = document.getElementById("nome");
+const email = document.getElementById("email");
+const senha = document.getElementById("senha");
+const confirmacaoSenha = document.getElementById("confirmacaoSenha");
+ */
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
