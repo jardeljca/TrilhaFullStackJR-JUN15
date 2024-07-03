@@ -95,3 +95,58 @@ const senha = document.getElementById("senha");
 const confirmacaoSenha = document.getElementById("confirmacaoSenha");
  */
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+/* Conexão dos formulários html ao backend */
+
+// Capturar os eventos de submissão dos formulários
+ document.getElementById('formCadastroDesktop').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const formData = {
+    nome: document.querySelector('input[name="nome"]').value,
+    email: document.querySelector('input[name="email"]').value,
+    senha: document.querySelector('input[name="senha"]').value,
+    confirmacaoSenha: document.querySelector('input[name="confirmaSenha"]').value
+  };
+
+  axios.post('http://localhost:3000/', formData)
+    .then(response => {
+      alert('Usuário registrado com sucesso!');
+    })
+    .catch(error => {
+      alert('Erro ao registrar usuário: ' + error.message);
+    });
+});
+
+document.getElementById('formCadastro').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const formData = {
+    nome: document.querySelector('input[name="nome"]').value,
+    email: document.querySelector('input[name="email"]').value,
+    senha: document.querySelector('input[name="senha"]').value,
+    confirmacaoSenha: document.querySelector('input[name="confirmaSenha"]').value
+  };
+
+  axios.post('http://localhost:3000/', formData)
+    .then(response => {
+      alert('Usuário registrado com sucesso!');
+    })
+    .catch(error => {
+      alert('Erro ao registrar usuário: ' + error.message);
+    });
+});
+
+/* document.getElementById('formLoginDesktop').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const formData = {
+    email: document.querySelector('input[name="email"]').value,
+    senha: document.querySelector('input[name="senha"]').value
+  };
+
+  axios.post('http://localhost:3000/login', formData)
+    .then(response => {
+      alert('Login realizado com sucesso!');
+    })
+    .catch(error => {
+      alert('Erro ao realizar login: ' + error.message);
+    });
+}); */
