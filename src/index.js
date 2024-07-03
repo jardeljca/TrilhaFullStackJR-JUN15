@@ -1,11 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 const app = express();
 const port = 3000;
 
-// Middleware para analisar o corpo das requisições JSON
 app.use(express.json());
+
+app.use(cors());
 
 // Conectar ao MongoDB
 mongoose
@@ -44,34 +46,35 @@ app.post("/", async (req, res) => {
     email: req.body.email,
     senha: req.body.senha,
     confirmacaoSenha: req.body.confirmacaoSenha,
-  })
-  await novoUsuario.save()
-  res.send(novoUsuario)
+  });
+  await novoUsuario.save();
+  res.send(novoUsuario);
 });
 
-  // Rota delete para excluir um usuário
-  app.delete("/:id", async (req, res) => {
-    const usuarioDeletar = await Usuario.findByIdAndDelete(req.params.id);
-    return res.send(usuarioDeletar);
-  });
+// Rota DELETE para excluir um usuário
+app.delete("/:id", async (req, res) => {
+  const usuarioDeletar = await Usuario.findByIdAndDelete(req.params.id);
+  return res.send(usuarioDeletar);
+});
 
-  // Rota put para atualizar um usuário
-  app.put("/:id", async (req, res) => {
-    const usuarioAtualizar = await Usuario.findByIdAndUpdate(req.params.id, {
+// Rota PUT para atualizar um usuário
+app.put("/:id", async (req, res) => {
+  const usuarioAtualizar = await Usuario.findByIdAndUpdate(
+    req.params.id,
+    {
       nome: req.body.nome,
       email: req.body.email,
       senha: req.body.senha,
-      confirmacaoSenha: req.body.confirmacaoSenha
-    }, {
-      new: true
-    })
-    return res.send(usuarioAtualizar)
-  })
-
+      confirmacaoSenha: req.body.confirmacaoSenha,
+    },
+    {
+      new: true,
+    }
+  );
+  return res.send(usuarioAtualizar);
+});
 
 // Iniciar o servidor
 app.listen(port, () => {
   console.log(`Aplicativo rodando ok na porta ${port}`);
 });
-
-//Conclusão dos métodos get e post - https://www.youtube.com/watch?v=zaWFnHagbrM - 45'36''
